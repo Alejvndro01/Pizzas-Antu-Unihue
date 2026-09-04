@@ -1223,15 +1223,15 @@
     
     const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
     
-    let message = `\u{00A1}Hola Pizzas Ant\u{00FA}!\n\n`;
-    message += `Quiero hacer el siguiente pedido:\n\n`;
+    let message = '\u00A1Hola Pizzas Ant\u00FA!\n\n';
+    message += 'Quiero hacer el siguiente pedido:\n\n';
     
     cart.forEach((item, idx) => {
       message += `${idx + 1}. ${item.name} (Tamaño L) x${item.qty} — $${(item.price * item.qty).toLocaleString('es-CL')}\n`;
     });
     
     message += `\n*Total estimado: $${total.toLocaleString('es-CL')}*\n\n`;
-    message += `¿Me confirman disponibilidad y día de retiro? ¡Gracias!`;
+    message += '\u00BFMe confirman disponibilidad y d\u00EDa de retiro? \u00A1Gracias!';
     
     const encoded = encodeURIComponent(message);
     const url = `https://wa.me/56995951712?text=${encoded}`;
