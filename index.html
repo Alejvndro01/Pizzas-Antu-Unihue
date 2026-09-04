@@ -9,14 +9,13 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   :root {
-    --fire: #E85D26;
-    --ember: #C73E1D;
-    --dark: #1A0F0A;
-    --charcoal: #2C1810;
-    --cream: #F5E6D3;
-    --gold: #D4A574;
-    --logo-gold: #C9A227;
-    --warm-white: #FFF8F0;
+    --fire: #E07A38;          /* Naranja cálido fuego */
+    --ember: #C9A227;         /* Dorado del logo */
+    --dark: #160C08;          /* Marrón muy oscuro / carbón */
+    --charcoal: #24140D;      /* Marrón secundario */
+    --cream: #F5E6D3;         /* Marfil suave para textos */
+    --gold: #D4A574;          /* Tono arena dorada */
+    --warm-white: #FDFBF7;    /* Fondo general marfil suave */
   }
 
   html { scroll-behavior: smooth; }
@@ -34,7 +33,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(26, 15, 10, 0.97);
+    background: rgba(22, 12, 8, 0.96);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 0.6rem 2rem;
@@ -42,7 +41,7 @@
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s;
-    border-bottom: 1px solid rgba(212, 165, 116, 0.15);
+    border-bottom: 1px solid rgba(201, 162, 39, 0.2);
   }
 
   .logo {
@@ -57,7 +56,7 @@
     height: 52px;
     border-radius: 50%;
     background: var(--dark);
-    border: 2px solid var(--logo-gold);
+    border: 2px solid var(--ember);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +80,7 @@
     line-height: 1.1;
   }
 
-  .logo-text span { color: var(--logo-gold); }
+  .logo-text span { color: var(--ember); }
 
   .nav-links {
     display: flex;
@@ -98,7 +97,7 @@
     font-size: 0.95rem;
   }
 
-  .nav-links a:hover { color: var(--logo-gold); }
+  .nav-links a:hover { color: var(--ember); }
 
   .cart-icon {
     position: relative;
@@ -129,8 +128,8 @@
   /* HERO */
   .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(26, 15, 10, 0.92), rgba(44, 24, 16, 0.82)),
-                url('https://drive.google.com/uc?export=view&id=1fbb56031-38a5-4159-8ed9-e7cf56e3742d') center/cover;
+    background: linear-gradient(135deg, rgba(22, 12, 8, 0.90), rgba(36, 20, 13, 0.78)),
+                url('assets/images/3.jpeg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,7 +143,7 @@
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(26, 15, 10, 0.5) 100%);
+    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(22, 12, 8, 0.6) 100%);
   }
 
   .hero-content {
@@ -161,12 +160,12 @@
 
   .hero-badge {
     display: inline-block;
-    background: var(--fire);
-    color: white;
+    background: var(--ember);
+    color: var(--dark);
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
   }
@@ -177,11 +176,11 @@
     color: var(--cream);
     margin-bottom: 1.5rem;
     line-height: 1.1;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.6);
   }
 
   .hero h1 em {
-    color: var(--fire);
+    color: var(--ember);
     font-style: italic;
   }
 
@@ -207,8 +206,8 @@
   }
 
   .hero-days span {
-    background: rgba(232, 93, 38, 0.2);
-    border: 1px solid var(--fire);
+    background: rgba(201, 162, 39, 0.15);
+    border: 1px solid var(--ember);
     color: var(--cream);
     padding: 0.5rem 1.2rem;
     border-radius: 50px;
@@ -226,15 +225,16 @@
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s;
-    box-shadow: 0 10px 30px rgba(232, 93, 38, 0.4);
+    box-shadow: 0 10px 30px rgba(224, 122, 56, 0.4);
     border: none;
     cursor: pointer;
   }
 
   .cta-btn:hover {
     background: var(--ember);
+    color: var(--dark);
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(232, 93, 38, 0.6);
+    box-shadow: 0 15px 40px rgba(201, 162, 39, 0.6);
   }
 
   .hero-info {
@@ -285,7 +285,7 @@
 
   /* ABOUT */
   .about {
-    background: var(--cream);
+    background: #F4E8D8;
     position: relative;
   }
 
@@ -299,21 +299,22 @@
   .about-image {
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     height: 500px;
-    background: url('https://drive.google.com/uc?export=view&id=1371c62a9-1f01-461b-9962-c6e703ce200a') center/cover;
+    background: url('assets/images/1.jpeg') center/cover;
     position: relative;
   }
 
   .about-image::after {
-    content: '';
+    content: '🔥';
     position: absolute;
     bottom: 20px;
     right: 20px;
-    font-size: 2rem;
-    background: var(--fire);
-    width: 70px;
-    height: 70px;
+    font-size: 1.8rem;
+    background: var(--ember);
+    color: var(--dark);
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -373,6 +374,7 @@
   .category-btn:hover {
     background: var(--dark);
     color: var(--cream);
+    border-color: var(--dark);
   }
 
   .menu-grid {
@@ -385,14 +387,15 @@
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     transition: all 0.4s;
     position: relative;
+    border: 1px solid rgba(212, 165, 116, 0.2);
   }
 
   .menu-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
   }
 
   .menu-item-image {
@@ -406,19 +409,19 @@
     position: absolute;
     top: 15px;
     left: 15px;
-    background: var(--fire);
-    color: white;
+    background: var(--ember);
+    color: var(--dark);
     padding: 0.3rem 1rem;
     border-radius: 50px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .menu-item-size {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(26, 15, 10, 0.85);
+    background: rgba(22, 12, 8, 0.85);
     color: var(--gold);
     padding: 0.3rem 1rem;
     border-radius: 50px;
@@ -474,12 +477,14 @@
   }
 
   .add-btn:hover {
-    background: var(--fire);
+    background: var(--ember);
+    color: var(--dark);
     transform: scale(1.05);
   }
 
   .add-btn.added {
     background: #2d8a4e;
+    color: white;
   }
 
   /* STEPS */
@@ -501,22 +506,22 @@
   .step-card {
     text-align: center;
     padding: 2.5rem 2rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     border-radius: 20px;
-    border: 1px solid rgba(212, 165, 116, 0.2);
+    border: 1px solid rgba(201, 162, 39, 0.2);
     transition: all 0.3s;
   }
 
   .step-card:hover {
-    background: rgba(232, 93, 38, 0.1);
+    background: rgba(201, 162, 39, 0.08);
     transform: translateY(-5px);
   }
 
   .step-number {
     width: 60px;
     height: 60px;
-    background: var(--fire);
-    color: white;
+    background: var(--ember);
+    color: var(--dark);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -552,7 +557,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(232, 93, 38, 0.5);
+    box-shadow: 0 10px 30px rgba(224, 122, 56, 0.4);
     z-index: 999;
     font-size: 1.8rem;
     transition: all 0.3s;
@@ -561,8 +566,8 @@
   }
 
   @keyframes pulse {
-    0%, 100% { box-shadow: 0 10px 30px rgba(232, 93, 38, 0.5); }
-    50% { box-shadow: 0 10px 50px rgba(232, 93, 38, 0.8); }
+    0%, 100% { box-shadow: 0 10px 30px rgba(224, 122, 56, 0.4); }
+    50% { box-shadow: 0 10px 50px rgba(224, 122, 56, 0.7); }
   }
 
   .cart-float:hover {
@@ -583,6 +588,7 @@
     justify-content: center;
     font-size: 0.8rem;
     font-weight: 700;
+    border: 2px solid var(--ember);
   }
 
   .cart-panel {
@@ -779,7 +785,7 @@
     margin-bottom: 1rem;
   }
 
-  .footer h2 span { color: var(--fire); }
+  .footer h2 span { color: var(--ember); }
 
   .footer p {
     font-size: 1.1rem;
@@ -802,12 +808,12 @@
     transition: color 0.3s;
   }
 
-  .footer-contact a:hover { color: var(--fire); }
+  .footer-contact a:hover { color: var(--ember); }
 
   .footer-bottom {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(212, 165, 116, 0.2);
+    border-top: 1px solid rgba(201, 162, 39, 0.2);
     font-size: 0.9rem;
     opacity: 0.7;
   }
@@ -816,7 +822,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(212, 165, 116, 0.15);
+    background: rgba(201, 162, 39, 0.15);
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     margin-top: 1.5rem;
@@ -828,8 +834,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
-    background: rgba(232, 93, 38, 0.15);
-    border: 1px solid var(--fire);
+    background: rgba(201, 162, 39, 0.1);
+    border: 1px solid var(--ember);
     padding: 1rem 2rem;
     border-radius: 15px;
     margin: 1.5rem 0;
@@ -857,6 +863,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    border: 1px solid var(--ember);
   }
 
   .toast.show { transform: translateX(0); }
@@ -882,7 +889,7 @@
 <nav class="navbar">
   <a href="#inicio" class="logo">
     <div class="logo-circle">
-      <img src="https://drive.google.com/uc?export=view&id=1GRt4Pn3ozoMnDEDphjVGqJdOuAVcDdrY" alt="Logo Pizzas Antú">
+      <img src="assets/Logo.png" alt="Logo Pizzas Antú">
     </div>
     <div class="logo-text">PIZZAS<br><span>ANTÚ</span></div>
   </a>
@@ -1068,7 +1075,7 @@
       price: 10000,
       category: "clasica",
       tag: "Clásica",
-      image: "https://drive.google.com/uc?export=view&id=1371c62a9-1f01-461b-9962-c6e703ce200a"
+      image: "assets/images/1.jpeg"
     },
     {
       id: 2,
@@ -1077,7 +1084,7 @@
       price: 12000,
       category: "clasica",
       tag: "Clásica",
-      image: "https://drive.google.com/uc?export=view&id=1015428e2-2453-4503-a842-9557dd251a5a"
+      image: "assets/images/2.jpeg"
     },
     {
       id: 3,
@@ -1086,7 +1093,7 @@
       price: 12000,
       category: "especial",
       tag: "Más pedida",
-      image: "https://drive.google.com/uc?export=view&id=1fbb56031-38a5-4159-8ed9-e7cf56e3742d"
+      image: "assets/images/3.jpeg"
     }
   ];
 
